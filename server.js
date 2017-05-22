@@ -6,7 +6,7 @@ const PORT = 1337;
 
 app.use('/graphql', expressGraphQL(
   {
-  graphiql: true,
+    graphiql: true,
   }
 ));
 app.listen(PORT, () => {
