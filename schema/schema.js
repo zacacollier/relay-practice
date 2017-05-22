@@ -8,19 +8,6 @@ const {
   GraphQLInt,
 } = graphql;
 
-const users = [
-  {
-    id: '23',
-    firstName: 'Jerry',
-    age: 32,
-  },
-  {
-    id: '69',
-    firstName: 'George',
-    age: 33,
-  },
-];
-
 const UserType = new GraphQLObjectType(
   {
     name: 'User',
