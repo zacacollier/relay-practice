@@ -31,3 +31,11 @@ Queries should match the signature of their respective data:
   }
   ...
 ```
+
+Lodash be yr frend:
+```js
+  ...
+        resolve(parentValue, args) {
+          return _.find(users, { id: args.id })
+  ...
+```
