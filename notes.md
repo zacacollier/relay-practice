@@ -80,3 +80,28 @@ Resolve circular Type definition errors with an Arrow function:
   }
   ...
 ```
+
+### Query Fragments
+
+- 'alias' queries like so:
+```
+{
+  walmart: company(id: "1") {
+    ...CompanyDetails
+  }
+  amazon: company(id: "2") {
+    ...CompanyDetails
+  }
+}
+
+fragment CompanyDetails on Company {
+  id
+  name
+  description
+  users {
+    age
+    firstName
+    id
+  }
+}
+```
