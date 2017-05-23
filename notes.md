@@ -105,3 +105,30 @@ fragment CompanyDetails on Company {
   }
 }
 ```
+
+### Mutations
+
+- a mutation `field`'s type should match that of the value returned by the Resolver:
+```
+name: 'Mutation',
+fields: {
+  addUser: {
+    type: UserType,
+```
+
+- use GraphQLNonNull to mark fields as 'required':
+```
+args: {
+  firstName: { type: new GraphQLNonNull(GraphQLString) },
+  age: { type: new GraphQLNonNull(GraphQLInt) },
+  companyId: { type: GraphQLString },
+},
+```
+
+- destructure args on the fly like so:
+```
+resolve(parentValue, { firstName, age }) {
+  return axios.post(`${HOST}/users`, { firstName, age })
+    .then(res => res.data);
+},
+```
