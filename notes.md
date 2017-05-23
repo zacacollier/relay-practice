@@ -45,7 +45,7 @@ Lodash be yr frend:
 - Require 2 arguments at minimum:
 ```js
     resolver(parentValueObj, args[, context]) {
-      /* 1. parentValueObj - the previous object state of the data instance
+      /* 1. parentValueObj - the current state of the data instance
        * 2. args           - the arguments supplied to the Resolver
        * 3. context        - important contextual information,
        *                     such as currently logged-in user credentials
@@ -64,4 +64,19 @@ Lodash be yr frend:
         return axios.get(`http://localhost:3000/companies/${parentValue.companyId}`)
         .then(res => res.data);
     }
+```
+
+Resolve circular Type definition errors with an Arrow function:
+
+```js
+  ...
+  {
+    name: 'User',
+    fields: () => ({
+      id: { type: GraphQLString },
+      firstName: { type: GraphQLString },
+      age: { type: GraphQLInt },
+    }),
+  }
+  ...
 ```
