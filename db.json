@@ -1,24 +1,40 @@
 {
   "users": [
-  {
-    "id": "23",
-    "firstName": "Jerry",
-    "age": 32
-  },
-  {
-    "id": "24",
-    "firstName": "Elaine",
-    "age": 31
-  },
-  {
-    "id": "25",
-    "firstName": "Kramer",
-    "age": 33
-  },
-  {
-    "id": "26",
-    "firstName": "George",
-    "age": 34
-  }
+    {
+      "id": "23",
+      "firstName": "Jerry",
+      "age": 32,
+      "companyId": "1"
+    },
+    {
+      "id": "24",
+      "firstName": "Elaine",
+      "age": 31,
+      "companyId": "1"
+    },
+    {
+      "id": "25",
+      "firstName": "Kramer",
+      "age": 33,
+      "companyId": "2"
+    },
+    {
+      "id": "26",
+      "firstName": "George",
+      "age": 34,
+      "companyId": "1"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Wal-Mart",
+      "description": "buncha crap"
+    },
+    {
+      "id": "2",
+      "name": "Amazon",
+      "description": "world domination"
+    }
   ]
 }
